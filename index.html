@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark text-white">
+    <div class="container bg-success w-75 my-5">
+      <h1 class="p-2 fs-2">Expense Tracker</h1>
+      <form id="expenseForm" class="d-flex flex-column gap-2">
+        <div class="form-floating">
+          <input
+            type="number"
+            class="form-control"
+            id="expense"
+            placeholder="0"
+          />
+          <label for="expense" class="text-dark">Expense</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            placeholder="lorem"
+          />
+          <label for="description" class="text-dark">Description</label>
+        </div>
+        <div class="form-floating">
+          <select
+            class="form-select"
+            id="categories"
+            aria-label="select expense"
+          >
+            <option selected>Select the category of expense</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Savings">Savings</option>
+            <option value="Investment">Investment</option>
+          </select>
+          <label for="categories" class="text-dark">Categories</label>
+        </div>
+        <button type="submit" class="btn btn-warning my-2 w-100">Add</button>
+      </form>
+    </div>
+    <div class="items w-75 mx-auto">
+      <table id="expenseTable" class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Expense</th>
+            <th scope="col">Description</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="expenseList">
+          <tr>
+            <th scope="row">1</th>
+            <td>Savings</td>
+            <td>50</td>
+            <td>for stationary items</td>
+            <td><button class="btn btn-primary">Edit</button></td>
+            <td><button class="btn btn-danger">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
